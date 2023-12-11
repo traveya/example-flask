@@ -1,0 +1,45 @@
+    {% extends "layout.html" %}
+
+    {% block title %}
+        Play
+    {% endblock %}
+
+    {% block head %}
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+            integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+            crossorigin=""/>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    {% endblock %}
+
+    {% block main %}
+    <div id="timer">&nbsp;</div>
+    <img src="https://cdn.freebiesupply.com/images/large/2x/harvard-logo-transparent.png" id="harvardlogo">
+        <div id="scoresheet">
+            <span class="bold">Round {{ roundNum | default('1') }}</span> <br>
+            {% if score is defined %}+{{ score | default('0') }} {% endif %}
+        </div>
+        <img src="../static/photos/{{selected_photo }}.jpg" id="photo">
+        <button id="submitbutton" disabled>Make a Guess!</button>
+        <div id="map">
+            <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+            <script src="{{ url_for('static', filename='script.js') }}"></script>
+        </div>
+        <div id="endscore" hidden>
+            <div class="centered">
+                <span class="bold">Good Guessing!</span>
+            </div><br>
+            <span id="finalscore">Final Score: </span><span class="bold" id="endscorevalue"></span>
+            <form>
+                {% if not session['user_id'] %}
+                <btn class="btn btn-primary disabled-button" disabled>Log In to Submit Score</btn>
+                {% else %}
+                <a href="/" class="btn btn-primary custom-button" id="uploadscorebutton" >Submit to Scoreboard</a>
+                {% endif %}
+                <a href="/" class="btn btn-primary custom-button" id="homebutton">Home</a>
+            </form>
+        </div>
+        <script>
+            data = send({{ data | tojson }})
+            photosPerGame = send({{ photosPerGame | tojson }})
+        </script>
+    {% endblock %}

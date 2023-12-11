@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <br>
+    <h2 class="centered">Welcome to CampusGuessr</h2>
+    <form>
+        <a href="/play" class="btn btn-primary custom-button" id="playbutton">Play</a>
+    </form>
+    <div id="leaderboardcontainer">
+        <h3 class="centered">Leaderboard</h3>
+        <div id="leaderboard">
+            <ol>
+                {% for score in scores %}
+                    <li>
+                        <span class="bold">{{ score['username'] }}</span>
+                        <small>{{ score['max_score'] }} points</small>
+                    </li>
+                {% endfor %}
+            </ol>
+        </div>
+    </div>
+    <img src="../static/memhall.png" id="memhall">
+    <img src="../static/memhall.png" id="memhall2">
+{% endblock %}

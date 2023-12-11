@@ -1,0 +1,321 @@
+body {
+    background-color: #FCFFF7;
+    font-family: serif;
+}
+
+.navbar-light .navbar-brand {
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.navbar-light .navbar-brand:hover {
+    color: #C297B8;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #FFFFFF;
+    font-family: serif;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #C297B8;
+}
+
+.centered {
+    text-align: center;
+}
+
+span.bold {
+    font-weight: bold;
+}
+
+.leaflet-grab,
+.leaflet-marker-icon {
+    cursor: default !important;
+}
+
+.leaflet-dragging .leaflet-grab,
+.leaflet-dragging .leaflet-grab.leaflet-interactive,
+.leaflet-dragging .leaflet-marker-draggable {
+    cursor: grabbing !important;
+}
+
+.custom-button {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(58, 0, 0, 1);
+    border-color: rgba(20, 0, 0, 1);
+}
+
+.custom-button:hover {
+    background-color: rgba(38, 0, 0, 1);
+    border-color: rgba(20, 0, 0, 1);
+    transition: background-color 0.5s ease-in-out;
+}
+
+.custom-button:active,
+.custom-button:focus {
+    background-color: rgba(58, 0, 0, 1);
+    border-color: rgba(20, 0, 0, 1);
+}
+
+.disabled-button {
+    position: absolute;
+    left: 50%;
+    bottom: 26%;
+    width: 40%;
+    transform: translateX(-50%);
+    background-color: rgba(58, 0, 0, 1);
+    border-color: rgba(20, 0, 0, 1);
+    background-color: #757575;
+    opacity: 0.7;
+}
+
+.disabled-button:hover,
+.disabled-button:active,
+.disabled-button:focus {
+    background-color: rgba(58, 0, 0, 1);
+    border-color: rgba(20, 0, 0, 1);
+    background-color: #757575;
+    opacity: 0.7;
+    cursor: default;
+}
+
+#logo {
+    width: 280px;
+    cursor: pointer;
+    position: relative;
+    top: -0.2rem;
+    left: 0;
+}
+
+#navbar-custom {
+    height: 10vh;
+    background-color: #660000 !important;
+    border: 0px solid !important;
+}
+
+#playbutton {
+    position: relative;
+    left: 50%;
+    width: 25%;
+}
+
+#map {
+    position: fixed;
+    opacity: 0.4;
+    bottom: 3rem;
+    right: 1rem;
+    height: 66%;
+    width: 50%;
+    transition: width 0.5s ease-in-out, height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+#photo {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    border: 1px solid !important;
+    border-color: #2A3439 !important;
+    height: 90%;
+    width: 100%;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 0.5;
+}
+
+#memhall {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 700px;
+    height: auto;
+    z-index: -1;
+}
+
+#memhall2 {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 700px;
+    height: auto;
+    z-index: -1;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+#submitbutton {
+    position: fixed;
+    color: white;
+    height: 2rem;
+    width: 20%;
+    right: 1rem;
+    bottom: 0.5rem;
+    border-radius: 1rem;
+    background-color: #2A3439;
+    transition: width 0.5s ease-in-out;
+}
+
+#submitbutton:disabled {
+    opacity: 0.8;
+}
+
+#nextbutton {
+    position: fixed;
+    color: white;
+    height: 2rem;
+    width: 20%;
+    right: 1rem;
+    bottom: 0.5rem;
+    border-radius: 1rem;
+    background-color: #166088;
+    transition: width 0.5s ease-in-out;
+}
+
+#scoresheet {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 15%;
+    height: 20%;
+    color: white;
+    background-color: rgba(58, 0, 0, 0.7);
+    transition: opacity 0.5s ease-in-out;
+    border-radius: 1rem;
+    padding: 20px;
+    margin: 20px;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+#endscore {
+    position: fixed;
+    left: 25%;
+    top: 25%;
+    width: 50%;
+    height: 20rem;
+    color: white;
+    background-color: rgba(102, 0, 0, 0.9);
+    border-radius: 1rem;
+    padding: 20px;
+    margin: 20px;
+    font-size: 32px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+#harvardlogo {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 50%;
+    width: auto;
+    z-index: 0;
+}
+
+#endscorevalue {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#finalscore {
+    position: absolute;
+    left: 4%;
+}
+
+#homebutton {
+    bottom: 8%;
+    width: 40%;
+}
+
+#uploadscorebutton {
+    bottom: 26%;
+    width: 40%;
+}
+
+#timer {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 0.8vw;
+    width: 100%;
+    background-color: #0892D0;
+    border: 1px solid;
+    border-color: #166088;
+    z-index: 1;
+}
+
+#mediumbutton {
+    width: 20%;
+}
+
+#error {
+    color: red;
+    margin: 2rem;
+    font-size: 24px;
+    font-style: italic;
+    background-color: #FFEEEE;
+}
+
+#leaderboardcontainer {
+    width: 25%;
+    height: 70%;
+    padding: 0.5rem;
+    color: white;
+    background-color: #660000;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    overflow: hidden;
+}
+
+#leaderboard {
+    height: 100%;
+    margin: 0.5rem;
+    padding-bottom: 0.8rem;
+    overflow-y: auto;
+}
+
+/* The following leaderboard CSS is modified from Shaiba on GoSnippets.com */
+/* https://gosnippets.com/snippets/leaderboard-snippet-with-awesome-animation-design */
+
+#leaderboard ol li {
+    position: relative;
+    z-index: 1;
+    font-size: 16px;
+    counter-increment: leaderboard;
+    padding: 0px 12px 20px 45px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0) scale(1, 1);
+    list-style-type: none;
+}
+
+#leaderboard ol li::before {
+    content: counter(leaderboard);
+    position: absolute;
+    z-index: 2;
+    top: 3px;
+    left: 15px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    color: #660000;
+    background: #fff;
+    border-radius: 20px;
+    text-align: center;
+}
+
+#leaderboard ol li small {
+    position: relative;
+    top: 0;
+    z-index: 2;
+    display: block;
+    text-align: left;
+}
